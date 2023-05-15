@@ -1,0 +1,122 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper__people {
+  margin-top: 30px;
+  margin-bottom: 167px;
+}
+
+.people {
+  display: flex;
+  max-width: 430px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .people {
+    max-width: 890px;
+    justify-content: flex-start;
+  }
+}
+
+.person {
+  height: 261px;
+  width: 200px;
+  background-color: #fff;
+  transition: transform 1s ease-out, border-radius 1s;
+}
+
+@media (pointer: fine) {
+  .person:hover {
+    background-color: #eee;
+    z-index: 1;
+    transform: scale(calc(220 / 200), calc(287 / 261))
+      scale(calc(264 / 220), calc(344.4 / 287));
+    border-radius: 12px;
+  }
+}
+
+.person__photo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.person__image {
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  transition: border-radius 1s;
+}
+
+@media (pointer: fine) {
+  .person:hover .person__image {
+    transform: scale(calc(200 / 220), calc(261 / 287)) translateY(1px);
+    border-radius: 60px;
+  }
+}
+
+.person__rank {
+  position: absolute;
+  left: 170px;
+  top: 50%;
+  color: #8b0000;
+  transform: translate(-50%, -50%);
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: white;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  padding: 7px 11px 7px 12px;
+  box-sizing: border-box;
+}
+
+.person__rank--10 {
+  padding: 7px;
+}
+
+.person__details {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (pointer: fine) {
+  .person:hover .person__details {
+    transform: scale(calc(200 / 220), calc(261 / 287)) translateY(-13px);
+  }
+}
+
+.person__extra {
+  visibility: hidden;
+  line-height: 21px;
+}
+
+.person__name {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2f4f4f;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+@media (pointer: fine) {
+  .person:hover .person__extra {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-top: 9px;
+    visibility: visible;
+  }
+}
